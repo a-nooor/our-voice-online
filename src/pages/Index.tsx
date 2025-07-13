@@ -19,13 +19,19 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-b from-secondary/30 to-white">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-textDark mb-6">
               {t("heroTitle")}
             </h1>
             <p className="text-lg text-gray-600 mb-8">
               {t("heroSubtitle")}
             </p>
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-sm text-left space-y-4">
+              <p className="text-gray-700">{t("websiteDescription")}</p>
+              <p className="text-gray-700">{t("websiteDescription2")}</p>
+              <p className="text-gray-700">{t("websiteDescription3")}</p>
+              <p className="text-gray-700 font-medium">{t("websiteDescription4")}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -34,19 +40,32 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">{t("ourServices")}</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">{t("servicesDescription")}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+              {
+                title: t("mediaProduction"),
+                description: t("mediaProductionDesc"),
+              },
+              {
+                title: t("digitalEmpowerment"),
+                description: t("digitalEmpowermentDesc"),
+              },
               {
                 title: t("psychologicalSupport"),
                 description: t("psychologicalSupportDesc"),
               },
               {
-                title: t("legalConsultations"),
-                description: t("legalConsultationsDesc"),
+                title: t("researchDocumentation"),
+                description: t("researchDocumentationDesc"),
               },
               {
-                title: t("empowermentPrograms"),
-                description: t("empowermentProgramsDesc"),
+                title: t("digitalPlatform"),
+                description: t("digitalPlatformDesc"),
+              },
+              {
+                title: t("opportunities"),
+                description: t("opportunitiesDesc"),
               },
             ].map((service, index) => (
               <div
