@@ -4,6 +4,7 @@ export const arTranslations = {
   "home": "الرئيسية",
   "about": "من نحن",
   "services": "خدماتنا",
+  "blog": "مساحات حرة",
   "contact": "تواصل معنا",
   
   // Home page

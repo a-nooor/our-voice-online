@@ -4,6 +4,7 @@ export const frTranslations = {
   "home": "Accueil",
   "about": "À Propos",
   "services": "Services",
+  "blog": "Blog",
   "contact": "Contact",
   
   // Home page

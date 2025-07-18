@@ -20,6 +20,7 @@ const Navigation = () => {
     { title: t("home"), path: "/" },
     { title: t("about"), path: "/about" },
     { title: t("services"), path: "/services" },
+    { title: t("blog"), path: "https://sawtonna.com/blog" },
     { title: t("contact"), path: "/contact" },
   ];
 
@@ -38,15 +39,27 @@ const Navigation = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center">
             <div className="flex space-x-8 space-x-reverse ml-6">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className="text-textDark hover:text-primary transition-colors"
-                >
-                  {item.title}
-                </Link>
-              ))}
+              {menuItems.map((item) => 
+                item.path.startsWith('http') ? (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-textDark hover:text-primary transition-colors"
+                  >
+                    {item.title}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className="text-textDark hover:text-primary transition-colors"
+                  >
+                    {item.title}
+                  </Link>
+                )
+              )}
             </div>
             <div className="flex items-center space-x-4 space-x-reverse">
               <SocialIcons size={18} className="mr-4" />
@@ -65,16 +78,29 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px]">
                 <div className="flex flex-col space-y-4 mt-8">
-                  {menuItems.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      className="text-textDark hover:text-primary transition-colors px-4 py-2"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
+                  {menuItems.map((item) => 
+                    item.path.startsWith('http') ? (
+                      <a
+                        key={item.path}
+                        href={item.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-textDark hover:text-primary transition-colors px-4 py-2"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="text-textDark hover:text-primary transition-colors px-4 py-2"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    )
+                  )}
                   <div className="px-4 pt-4 border-t">
                     <SocialIcons size={20} className="justify-start" />
                   </div>

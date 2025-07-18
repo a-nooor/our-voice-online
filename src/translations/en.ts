@@ -4,6 +4,7 @@ export const enTranslations = {
   "home": "Home",
   "about": "About Us",
   "services": "Services",
+  "blog": "Blog",
   "contact": "Contact Us",
   
   // Home page
