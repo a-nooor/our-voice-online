@@ -15,6 +15,7 @@ export const frTranslations = {
   "websiteDescription2": "Dans un monde où les voix sont souvent exclues, nous nous efforçons de rétablir l'équilibre grâce aux médias alternatifs, aux récits centrés sur l'humain et au partage d'expériences vécues qui sont souvent réduites au silence.",
   "websiteDescription3": "Nous offrons du contenu original et analytique, des histoires de la vraie vie, des outils d'autonomisation numérique et des opportunités de se connecter avec d'autres qui travaillent vers la justice sociale.",
   "websiteDescription4": "Ici, nous écrivons, documentons et façonnons notre propre récit—au-delà de la peur et de la censure.",
+  "heroSlogan": "صوتنا | SAWTONNA",
   
   // About page
   "aboutUsTitle": "À Propos de Sawtonna",
