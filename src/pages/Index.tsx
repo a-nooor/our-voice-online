@@ -17,104 +17,65 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,hsl(var(--secondary)/0.3),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,hsl(var(--accent)/0.2),transparent_50%)]"></div>
-        <div className="container mx-auto px-4 relative">
-          <div className="text-center max-w-6xl mx-auto">
-            {/* Main Hero Slogan */}
-            <div className="mb-8">
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4 tracking-tight">
-                {t("heroSlogan")}
-              </h1>
-              <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
-            </div>
-            
-            {/* Subtitle */}
-            <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+      <section className="pt-24 pb-12 bg-gradient-to-b from-secondary/30 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-textDark mb-6">
+              {t("heroTitle")}
+            </h1>
+            <p className="text-lg text-gray-600 mb-8">
               {t("heroSubtitle")}
-            </h2>
-            
-            {/* Description Cards */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-card/60 backdrop-blur-sm p-8 rounded-2xl shadow-card border border-border/50 text-left hover:shadow-soft transition-all duration-300">
-                <p className="text-card-foreground leading-relaxed">{t("websiteDescription")}</p>
-              </div>
-              <div className="bg-card/60 backdrop-blur-sm p-8 rounded-2xl shadow-card border border-border/50 text-left hover:shadow-soft transition-all duration-300">
-                <p className="text-card-foreground leading-relaxed">{t("websiteDescription2")}</p>
-              </div>
+            </p>
+            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-sm text-left space-y-4">
+              <p className="text-gray-700">{t("websiteDescription")}</p>
+              <p className="text-gray-700">{t("websiteDescription2")}</p>
+              <p className="text-gray-700">{t("websiteDescription3")}</p>
+              <p className="text-gray-700 font-medium">{t("websiteDescription4")}</p>
             </div>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-card/60 backdrop-blur-sm p-8 rounded-2xl shadow-card border border-border/50 text-left hover:shadow-soft transition-all duration-300">
-                <p className="text-card-foreground leading-relaxed">{t("websiteDescription3")}</p>
-              </div>
-              <div className="bg-card/60 backdrop-blur-sm p-8 rounded-2xl shadow-card border border-border/50 text-left hover:shadow-soft transition-all duration-300">
-                <p className="text-card-foreground font-medium leading-relaxed">{t("websiteDescription4")}</p>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <Button 
-              size="lg"
-              className="bg-gradient-primary hover:opacity-90 text-primary-foreground px-8 py-6 text-lg rounded-xl shadow-soft hover:shadow-card transition-all duration-300 hover:scale-105"
-              onClick={handleContactUs}
-            >
-              {t("contactUs")}
-            </Button>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-background">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">{t("ourServices")}</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">{t("servicesDescription")}</p>
-          </div>
-          
+          <h2 className="text-3xl font-bold text-center mb-12">{t("ourServices")}</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">{t("servicesDescription")}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: t("mediaProduction"),
                 description: t("mediaProductionDesc"),
-                gradient: "from-primary/10 to-secondary/10"
               },
               {
                 title: t("digitalEmpowerment"),
                 description: t("digitalEmpowermentDesc"),
-                gradient: "from-accent/10 to-primary/10"
               },
               {
                 title: t("psychologicalSupport"),
                 description: t("psychologicalSupportDesc"),
-                gradient: "from-secondary/10 to-accent/10"
               },
               {
                 title: t("researchDocumentation"),
                 description: t("researchDocumentationDesc"),
-                gradient: "from-primary/10 to-accent/10"
               },
               {
                 title: t("digitalPlatform"),
                 description: t("digitalPlatformDesc"),
-                gradient: "from-accent/10 to-secondary/10"
               },
               {
                 title: t("opportunities"),
                 description: t("opportunitiesDesc"),
-                gradient: "from-secondary/10 to-primary/10"
               },
             ].map((service, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${service.gradient} p-8 rounded-2xl shadow-card border border-border/50 hover:shadow-soft transition-all duration-300 hover:scale-105 group`}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <h3 className="text-2xl font-bold mb-6 text-primary group-hover:text-accent transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-4 text-primary">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
           </div>
@@ -122,16 +83,14 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-gradient-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1),transparent_70%)]"></div>
-        <div className="container mx-auto px-4 text-center relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-8">{t("contactUs")}</h2>
-          <p className="text-xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+      <section className="bg-primary text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">{t("contactUs")}</h2>
+          <p className="mb-8 max-w-2xl mx-auto">
             {t("servicesDescription")}
           </p>
           <Button 
-            size="lg"
-            className="bg-background text-primary hover:bg-background/90 px-12 py-6 text-xl rounded-xl shadow-soft hover:shadow-card transition-all duration-300 hover:scale-105"
+            className="bg-white text-primary hover:bg-gray-100 px-8 py-6 text-lg"
             onClick={handleContactUs}
           >
             {t("contactUs")}

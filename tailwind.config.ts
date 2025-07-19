@@ -25,15 +25,23 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#6E59A5",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#FDE1D3",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "#0EA5E9",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -44,14 +52,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
       },
       fontFamily: {
         kufi: ["Noto Kufi Arabic", "sans-serif"],
@@ -60,17 +60,6 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-hero': 'var(--gradient-hero)',
-      },
-      boxShadow: {
-        'soft': 'var(--shadow-soft)',
-        'card': 'var(--shadow-card)',
-      },
-      transitionTimingFunction: {
-        'smooth': 'var(--transition-smooth)',
       },
     },
   },
