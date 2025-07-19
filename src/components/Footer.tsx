@@ -33,6 +33,7 @@ const Footer = () => {
     { title: t("home"), path: "/" },
     { title: t("about"), path: "/about" },
     { title: t("services"), path: "/services" },
+    { title: t("blog"), path: "https://sawtonna.com/blog", external: true },
     { title: t("contact"), path: "/contact" },
   ];
 
@@ -51,13 +52,25 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 md:space-x-reverse">
             <nav className="flex space-x-6 space-x-reverse">
               {menuItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className="text-textDark hover:text-primary transition-colors text-sm"
-                >
-                  {item.title}
-                </Link>
+                item.external ? (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-textDark hover:text-primary transition-colors text-sm"
+                  >
+                    {item.title}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className="text-textDark hover:text-primary transition-colors text-sm"
+                  >
+                    {item.title}
+                  </Link>
+                )
               ))}
             </nav>
             

@@ -17,30 +17,33 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-b from-secondary/30 to-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-textDark mb-6">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/5 via-secondary/10 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(110,89,165,0.1),transparent)] pointer-events-none"></div>
+        <div className="container mx-auto px-6 relative">
+          <div className="text-center max-w-5xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold text-primary mb-8 tracking-tight">
               {t("heroTitle")}
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed font-light">
               {t("heroSubtitle")}
             </p>
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-sm text-left space-y-4">
-              <p className="text-gray-700">{t("websiteDescription")}</p>
-              <p className="text-gray-700">{t("websiteDescription2")}</p>
-              <p className="text-gray-700">{t("websiteDescription3")}</p>
-              <p className="text-gray-700 font-medium">{t("websiteDescription4")}</p>
+            <div className="bg-white/90 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-xl border border-white/20 text-left space-y-6 max-w-4xl mx-auto">
+              <p className="text-gray-700 text-lg leading-relaxed">{t("websiteDescription")}</p>
+              <p className="text-gray-700 text-lg leading-relaxed">{t("websiteDescription2")}</p>
+              <p className="text-gray-700 text-lg leading-relaxed">{t("websiteDescription3")}</p>
+              <p className="text-gray-800 font-semibold text-lg">{t("websiteDescription4")}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">{t("ourServices")}</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">{t("servicesDescription")}</p>
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50/50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t("ourServices")}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{t("servicesDescription")}</p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -70,12 +73,12 @@ const Index = () => {
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50"
               >
-                <h3 className="text-xl font-bold mb-4 text-primary">
+                <h3 className="text-2xl font-bold mb-5 text-primary group-hover:text-primary/80 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-600 text-lg leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
@@ -83,14 +86,15 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-primary text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">{t("contactUs")}</h2>
-          <p className="mb-8 max-w-2xl mx-auto">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.1),transparent)] pointer-events-none"></div>
+        <div className="container mx-auto px-6 text-center relative">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">{t("contactUs")}</h2>
+          <p className="mb-12 max-w-3xl mx-auto text-xl leading-relaxed text-white/90">
             {t("servicesDescription")}
           </p>
           <Button 
-            className="bg-white text-primary hover:bg-gray-100 px-8 py-6 text-lg"
+            className="bg-white text-primary hover:bg-white/95 hover:scale-105 px-10 py-6 text-xl font-semibold rounded-2xl shadow-xl transition-all duration-300 transform"
             onClick={handleContactUs}
           >
             {t("contactUs")}

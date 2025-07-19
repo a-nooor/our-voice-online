@@ -9,7 +9,7 @@ export const frTranslations = {
   
   // Home page
   "contactUs": "Contactez-nous",
-  "heroTitle": "Sawtonna: Amplifier les Voix, Construire la Communauté",
+  "heroTitle": "صوتنا | SAWTONNA",
   "heroSubtitle": "Un foyer numérique pour les communautés marginalisées et les journalistes indépendants de la région",
   "websiteDescription": "Ce site web est l'extension numérique de Sawtonna—un espace médiatique gratuit et une plateforme ouverte créée comme un foyer numérique pour les communautés marginalisées et les journalistes indépendants de la région.",
   "websiteDescription2": "Dans un monde où les voix sont souvent exclues, nous nous efforçons de rétablir l'équilibre grâce aux médias alternatifs, aux récits centrés sur l'humain et au partage d'expériences vécues qui sont souvent réduites au silence.",

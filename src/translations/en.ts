@@ -9,7 +9,7 @@ export const enTranslations = {
   
   // Home page
   "contactUs": "Contact Us",
-  "heroTitle": "Sawtonna: Amplifying Voices, Building Community",
+  "heroTitle": "صوتنا | SAWTONNA",
   "heroSubtitle": "A digital home for marginalized communities and independent journalists across the region",
   "websiteDescription": "This website is the digital extension of Sawtonna—a free media space and open platform created as a digital home for marginalized communities and independent journalists across the region.",
   "websiteDescription2": "In a world where voices are often excluded, we strive to restore balance through alternative media, human-centered narratives, and the sharing of lived experiences that are frequently silenced.",
